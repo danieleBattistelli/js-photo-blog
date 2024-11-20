@@ -1,9 +1,13 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 
+}
 
 body {
     background-image: url(../img/cork.png);
     background-size: cover;
-    height: 100%;
 }
 
 header {
@@ -23,5 +27,62 @@ h1 {
 }
 
 .photo-card {
-    margin: 10px 0px;
+    position: relative;
+    margin: 20px auto;
+    /* Aggiungi margine automatico per centrare la card */
+    padding: 10px;
+    /* Aggiungi padding per dare spazio interno alla card */
+    width: 90%;
+    /* Imposta una larghezza percentuale per la card */
+    max-width: 400px;
+    /* Limita la larghezza massima */
+    background: #ffffff;
+    /* Colore di sfondo della card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aggiungi ombra per l'effetto card */
+    border-radius: 10px;
+    /* Arrotonda gli angoli della card */
+    text-align: center;
+    /* Centra il testo e gli elementi della card */
+    
+}
+
+.pin-image {
+    position: absolute;
+    top: -20px;
+    /* Regola l'altezza a seconda delle tue esigenze */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    /* Regola la larghezza a seconda delle tue esigenze */
+    z-index: 1;
+    /* Assicurati che il pin sia sopra l'immagine */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    /* Overlay inizialmente nascosto */
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.show {
+    display: flex;
+    /* Mostra l'overlay */
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
