@@ -40,6 +40,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
       photoCard.className = 'col-12 col-md-6 col-lg-4 photo-card';
       photoCard.innerHTML = `
              <div class="card" data-id="${photo.id}">
+             <button class="close-button">&times;</button>
              <img src="./img/pin.svg" alt="pin" class="pin-image">
              <img src="${photo.url}" class="card-img-top" alt="${photo.title}"> 
              <div class="card-body"> 
@@ -51,10 +52,10 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 //Step 4:  Aggiungo un event listener al bottone di chiusura che rimuove la card dal DOM quando 
 //viene cliccato. e.stopPropagation(); è usato per evitare che il click sul bottone apra l'overlay.            
 //-------------------------------------------------------------------------------------------------
- photoCard.querySelector('.close-button').addEventListener('click', (e) =>
-  { e.stopPropagation(); 
-  remove();
-  });
+  photoCard.querySelector('.close-button').addEventListener('click', (e) =>
+   { e.stopPropagation(); 
+   photoCard.remove();
+   });
 
 
 //-------------------------------------------------------------------------------------------------
