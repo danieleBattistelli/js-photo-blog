@@ -39,10 +39,11 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
       const photoCard = document.createElement('div');
       photoCard.className = 'col-12 col-md-6 col-lg-4 photo-card';
       photoCard.innerHTML = `
-             <div class="card" data-id="${photo.id}"> 
+             <div class="card" data-id="${photo.id}">
+             <img src="./img/pin.svg" alt="pin" class="pin-image">
              <img src="${photo.url}" class="card-img-top" alt="${photo.title}"> 
              <div class="card-body"> 
-             <h5 class="card-title">${photo.title}</h5> 
+             <h4 class="card-title">${photo.title}</h4> 
              </div> 
              </div> 
              `;
@@ -65,7 +66,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 //-----------------------------------------------------------------------------------------------------
 
       photoGallery.appendChild(photoCard);
-      console.log(photoCard)
+      //console.log(photoCard)
     });
   })
   .catch(error => console.error('errore nel caricamento delle foto', error));
@@ -77,6 +78,6 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 //---------------------------------------------------------------------------------------------------------
 
 closeOverlayButton.addEventListener('click', () => {
-  overlay.classList.remove('show'); // Nasconde l'overlay 
+  overlay.classList.remove('show');
 });
 

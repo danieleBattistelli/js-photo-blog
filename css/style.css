@@ -44,19 +44,27 @@ h1 {
     /* Arrotonda gli angoli della card */
     text-align: center;
     /* Centra il testo e gli elementi della card */
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transizioni fluide */
+    cursor: pointer;
+    /* Cambia il cursore in un puntatore */
+
+}
+
+.photo-card:hover {
+    transform: scale(1.05) rotate(10deg);
+    /* Zoom e rotazione */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Aumenta l'ombra */
 }
 
 .pin-image {
     position: absolute;
     top: -20px;
-    /* Regola l'altezza a seconda delle tue esigenze */
     left: 50%;
     transform: translateX(-50%);
     width: 30px;
-    /* Regola la larghezza a seconda delle tue esigenze */
     z-index: 1;
-    /* Assicurati che il pin sia sopra l'immagine */
 }
 
 .overlay {
