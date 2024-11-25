@@ -13,7 +13,8 @@ body {
 header {
     background-image: url(../img/wall.png);
     background-size: cover;
-    height: 20vh;
+    min-height: 20vh;
+    min-width: 10vw;
 }
 
 h1 {
@@ -29,23 +30,15 @@ h1 {
 .photo-card {
     position: relative;
     margin: 20px auto;
-    /* Aggiungi margine automatico per centrare la card */
     padding: 10px;
-    /* Aggiungi padding per dare spazio interno alla card */
     width: 90%;
-    /* Imposta una larghezza percentuale per la card */
     max-width: 400px;
-    /* Limita la larghezza massima */
-    background: #ffffff;
-    /* Colore di sfondo della card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Aggiungi ombra per l'effetto card */
+    background: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 10px;
-    /* Arrotonda gli angoli della card */
-    text-align: center;
-    /* Centra il testo e gli elementi della card */
+    text-align: center; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transizioni fluide */
+    /* Transizioni fluide .....ease inizia lentamente, accelera nel mezzo e rallenta verso la fine */
     cursor: pointer;
     /* Cambia il cursore in un puntatore */
 
@@ -89,15 +82,20 @@ h1 {
     text-align: center;
 }
 
-.overlay-image {
+ .overlay-image {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
-}
+} 
 
 .hide-pin {
     display: none;
 }
+
+.hide-x {
+    display: none;
+}
+
 
 .close-button {
     position: absolute;

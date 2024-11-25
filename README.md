@@ -27,8 +27,6 @@ Buon Lavoro
 Inserire una X nella card per rimuoverla
 
 
-
-
 ### dati
 endpoint  di JSON Placeholder ;
 
@@ -74,4 +72,4 @@ Aggiungo un event listener al bottone di chiusura che rimuove la classe show dal
 ### Output
 
 Visualizzo le photocard nella pagina dove e' possibile ingrandire l'immagine cliccando su una singola photocard, eliminarne una o 
-guardare un,animazione al passaggio del mouse su di essa.
+guardare un' animazione al passaggio del mouse su di essa.
