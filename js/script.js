@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", function () { //esegue codice Java
   axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
     .then(response => {
       const photos = response.data
-
-      //----------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------     
       //Step 3: Genero le card delle foto:
       //per ogni foto , creo un div e assegno classi di Bootstrap per rendere il layout responsivo:
       // col-12 per dispositivi mobili (1 colonna),
@@ -68,8 +67,7 @@ document.addEventListener("DOMContentLoaded", function () { //esegue codice Java
         photoCard.querySelector('.card-img-top').addEventListener('click', () => {
           overlayImage.src = photo.url; // Imposta l'immagine dell'overlay 
           overlay.classList.add('show'); // Mostra l'overlay 
-          document.querySelectorAll('.pin-image').forEach(pin => pin.classList.add('hide-pin'));//nascondo pin
-          document.querySelectorAll('.x-delete').forEach(x =>x.classList.add('hide-x'));//nascondo x
+          
         });
 
         //-----------------------------------------------------------------------------------------------------
@@ -91,7 +89,5 @@ document.addEventListener("DOMContentLoaded", function () { //esegue codice Java
 
   closeOverlayButton.addEventListener('click', () => {
     overlay.classList.remove('show');
-    document.querySelectorAll('.pin-image').forEach(pin => pin.classList.remove('hide-pin'));
-    document.querySelectorAll('.x-delete').forEach(x => x.classList.remove('hide-x'));
   });
 });
